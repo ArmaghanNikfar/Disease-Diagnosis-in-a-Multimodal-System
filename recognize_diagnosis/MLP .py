@@ -7,7 +7,7 @@ from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 from sklearn.metrics import accuracy_score, f1_score, precision_recall_fscore_support, mean_squared_error
 import pandas as pd
 
-data_path = 'Patient_Data_Diagnosis.xlsx'  
+data_path = 'AI_MedData.xlsx'  
 df = pd.read_excel(data_path)
 
 df_cleaned = df.drop(columns=['Patient Name'], errors='ignore')

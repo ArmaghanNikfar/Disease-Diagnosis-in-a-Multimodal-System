@@ -10,7 +10,7 @@ from keras._tf_keras.keras.layers import Dense, LSTM, Dropout
 from sklearn.metrics import accuracy_score, f1_score, precision_recall_fscore_support, mean_squared_error
 
 
-data_path = 'Patient_Data_Diagnosis.xlsx'  
+data_path = 'AI_MedData.xlsx'  
 df = pd.read_excel(data_path)
 
 df_cleaned = df.drop(columns=['Patient Name'])
