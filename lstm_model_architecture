@@ -1,0 +1,21 @@
+// LSTM Model Architecture
+digraph {
+	A [label="Text Features (NLP)"]
+	B [label="Numeric Patient Data"]
+	C [label="Image Features (Lab Data)"]
+	D [label="LSTM Layer (Hidden Layer 1)"]
+	E [label="Dense Layer (Hidden Layer 2)"]
+	F [label="Output Layer
+(Disease Prediction)"]
+	G [label="Class 1: Influenza"]
+	H [label="Class 2: COVID-19"]
+	I [label="Class 3: Common Cold"]
+	A -> D
+	B -> D
+	C -> D
+	D -> E
+	E -> F
+	F -> G
+	F -> H
+	F -> I
+}
