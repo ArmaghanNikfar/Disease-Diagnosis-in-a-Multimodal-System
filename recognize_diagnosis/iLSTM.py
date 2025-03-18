@@ -73,11 +73,11 @@ problem.varmax = varmax
 
 
 params = ypstruct.structure()
-params.maxit = 15  # افزایش تعداد تکرارها برای همگرایی بهتر
-params.npop = 20  # افزایش جمعیت
-params.G = 9.9 # کاهش مقدار گرانش برای کنترل همگرایی
-params.Tetha = 14  # بدون تغییر، مگر تست‌های بیشتری انجام شود
-params.MuMin = 5  # تغییر محدوده مقدار مو
+params.maxit = 15 
+params.npop = 20  
+params.G = 9.9
+params.Tetha = 14  
+params.MuMin = 5  
 params.MuMax = 10
 params.pSS = 0.5
 params.DisplayInfo = True
@@ -134,16 +134,6 @@ models = ['Model with Adam', 'Model with GPC']
 
 print(f"Test Accuracy (GPC): {accuracy_gpc:.4f}")
 
-
-# plt.figure(figsize=(8, 6))
-# plt.plot(['Model with Adam', 'Model with GPC'], [accuracy_adam, accuracy_gpc], marker='o', color='b', linestyle='-', markersize=8)
-# plt.title('Comparison of Test Accuracy between Models')
-# plt.xlabel('Model')
-# plt.ylabel('Test Accuracy')
-# plt.ylim([0, 1])
-# plt.grid(True)
-# plt.show()
-# Plot of Best Costs History
 plt.semilogy(out.bestcosts)
 plt.xlim(0, params.maxit)
 plt.xlabel("Iterations")
