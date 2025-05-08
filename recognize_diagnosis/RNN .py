@@ -46,7 +46,7 @@ model = Sequential([
 ])
 
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-model.fit(X_train, y_train, epochs=26, batch_size=2, validation_data=(X_test, y_test))
+model.fit(X_train, y_train, epochs=25, batch_size=16, validation_data=(X_test, y_test))
 model.save('rnn_Adam_model.h5')
 
 loss, accuracy = model.evaluate(X_test, y_test)

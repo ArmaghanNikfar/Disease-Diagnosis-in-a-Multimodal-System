@@ -1,13 +1,13 @@
 import matplotlib.pyplot as plt
 
-iLSTM = "1.0000"
-sLSTM = "0.8333"
+iLSTM = "0.9667"
+sLSTM = "0.9333"
 RNN = "0.8333"
-MLP = "0.6667"
+MLP = "0.9000"
 Random_Forest = "0.4364"
 
 models = ['iLSTM', 'sLSTM', 'RNN', 'MLP', 'Random_Forest']
-accuracies = [1.0000, 0.8333, 0.8333, 0.6667, 0.4364]
+accuracies = [0.9667, 0.9333, 0.8333, 0.9000, 0.4364]
 
 plt.figure(figsize=(10,6))
 plt.bar(models, accuracies , color=['r', 'b', 'g', 'm', 'c'])

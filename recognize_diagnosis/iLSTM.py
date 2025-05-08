@@ -73,8 +73,8 @@ problem.varmax = varmax
 
 
 params = ypstruct.structure()
-params.maxit = 15 
-params.npop = 20  
+params.maxit = 17
+params.npop = 12  
 params.G = 9.9
 params.Tetha = 14  
 params.MuMin = 5  

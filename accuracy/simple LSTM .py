@@ -1,20 +1,18 @@
 import matplotlib.pyplot as plt
 
 epochs = list(range(1, 26))
-accuracy = [0.0800, 0.3879, 0.3882, 0.5538, 0.3185, 0.4583, 0.3799, 0.4736, 0.4694, 0.4779,
-            0.5257, 0.3767, 0.5099, 0.3588, 0.4484, 0.3621, 0.3053, 0.4045, 0.4375, 0.4663,
-            0.5855, 0.4732, 0.4696, 0.4155, 0.6220]
-loss = [1.3875, 1.3825, 1.3781, 1.3645, 1.3751, 1.3617, 1.3613, 1.3324, 1.2957, 1.3114,
-        1.0987, 1.2301, 1.0334, 1.2880, 1.1755, 1.2056, 1.2587, 0.9810, 1.0707, 1.0569,
-        0.7231, 0.8371, 0.7895, 0.8425, 0.7755]
+accuracy = [0.3070,0.4492,0.2664,0.3814,0.5418,0.6859 ,0.7139,0.6618,0.5574,0.6755,0.7462,0.7510 ,0.6820, 0.7632,00.8521,0.7432,0.7430,0.7820,
+            0.8197,0.7983,0.8244,0.8853, 0.8395 , 0.7807, 0.9333]
+loss = [1.3639, 1.2505,1.2190,1.0704,0.9233,0.8605,0.8896,0.8548,0.8134,0.8562 ,0.6250,0.7469,0.6681,0.5921,0.5921 ,0.6327,0.6260 ,
+        0.5757,0.5836,0.5411,0.4553, 0.3336,0.4312,0.5693, 0.3039]
 
 
 plt.figure(figsize=(12, 6))
-plt.plot(epochs, accuracy, label=" Accuracy", marker="o", linestyle="-", color='b')
-plt.plot(epochs, loss, label=" Loss", marker="o", linestyle="-", color='r')
+plt.plot(epochs, accuracy, label=" Accuracy", marker="o", linestyle="-")
+plt.plot(epochs, loss, label=" Loss", marker="o", linestyle="-")
 plt.xlabel("Epochs")
 plt.ylabel("Value")
-plt.title("RNN Model: Accuracy & Loss over Epochs")
+plt.title("Simple LSTM")
 plt.legend()
 plt.grid(True)
 plt.show()

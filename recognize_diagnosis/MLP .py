@@ -38,7 +38,7 @@ model = Sequential([
 ])
 
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-model.fit(X_train, y_train, epochs=26, batch_size=16, validation_data=(X_test, y_test), verbose=1)
+model.fit(X_train, y_train, epochs=25, batch_size=16, validation_data=(X_test, y_test), verbose=1)
 
 y_pred_probs = model.predict(X_test)
 y_pred = np.argmax(y_pred_probs, axis=1)
