@@ -71,8 +71,8 @@ def run(problem, params):
             d = (V0[0]**2)/((2*G)*(np.sin(np.deg2rad(Tetha))+(Mu*np.cos(np.deg2rad(Tetha)))))  # Stone Destination  
             x = (V0[0]**2)/((2*G)*(np.sin(np.deg2rad(Tetha))))                                 # Worker Movement
             epsilon = np.random.uniform(-((varmax-varmin)/2),((varmax-varmin)/2), nvar)        # Epsilon
-            new_position = apply_bounds((pop[i].position + d) * (x * epsilon), varmin, varmax) # Position of Stone and Worker
-          # new_position = apply_bounds((pop[i].position + d) + (x * epsilon), varmin, varmax) # In some obj func use this to get better results
+            # new_position = apply_bounds((pop[i].position + d) * (x * epsilon), varmin, varmax) # Position of Stone and Worker
+            new_position = apply_bounds((pop[i].position + d) + (x * epsilon), varmin, varmax) # In some obj func use this to get better results
 
             # Substitution
             newsol = empty_stones.deepcopy()
